@@ -32,7 +32,7 @@ function Contact() {
 
   const sendEmail = (values, { resetForm, setSubmitting }) => {
     emailjs
-      .sendForm(
+      .send(
         "service_xwas95h",
         "template_7lpqkni",
         form.current,
@@ -53,7 +53,7 @@ function Contact() {
 
   return (
     <div className="container">
-      <h1>Contact Us</h1>
+      
 
       <Formik
         initialValues={initialValues}
@@ -64,7 +64,7 @@ function Contact() {
           <Form ref={form}>
 
             <div>
-              <label>Name</label>
+             
 
               <Field
                 type="text"
@@ -80,7 +80,7 @@ function Contact() {
             </div>
 
             <div>
-              <label>Email</label>
+              
 
               <Field
                 type="email"
@@ -96,13 +96,7 @@ function Contact() {
             </div>
 
             <div>
-              <label>Subject</label>
-
-              <Field
-                type="text"
-                name="subject"
-                placeholder="Subject"
-              />
+              
 
               <ErrorMessage
                 name="subject"
@@ -112,7 +106,7 @@ function Contact() {
             </div>
 
             <div>
-              <label>Message</label>
+             
 
               <Field
                 as="textarea"
